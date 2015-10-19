@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Zmeyka
 {
-    class VerticalLine : Figure
+    class HorizontalLine : Figure
     {
-        public VerticalLine(int yUp, int yDown, int x, char sym)
+       
+        public HorizontalLine(int xL, int xR, int y, char sym)
         {
             pList = new List<Point>();
-            for(int y=yUp; y<= yDown;y++)
+            for(int x= xL;x<=xR; x++)
             {
-                Point p = new Point(x, y, sym);
-                pList.Add(p); 
+                Point p = new Point(x,y,sym);
+                pList.Add(p);
             }
         }
     }
